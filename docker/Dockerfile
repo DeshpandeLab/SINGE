@@ -35,8 +35,8 @@ COPY tests/run_SINGE_Test.sh tests/
 ENV SINGE_RUNNING_IN_DOCKER 1
 
 # Download the compiled SINGE executables from the stable release
-# md5sum of v0.5.0 SINGE_GLG_Test is 1834d44cb686cdfd9b7ee99398518115
-RUN tag=v0.5.0 && \
+# md5sum of v0.5.1 SINGE_GLG_Test is 95bc486778c3111533944480a2be3b74
+RUN tag=v0.5.1 && \
     wget --quiet https://github.com/gitter-lab/SINGE/releases/download/$tag/SINGE_Test && \
     wget --quiet https://github.com/gitter-lab/SINGE/releases/download/$tag/SINGE_GLG_Test && \
     wget --quiet https://github.com/gitter-lab/SINGE/releases/download/$tag/SINGE_Aggregate && \
@@ -46,7 +46,7 @@ RUN tag=v0.5.0 && \
 
 # Download an intermediate version of the compiled SINGE executables for testing
 # Download the md5sums of the source .m files and binaries
-#RUN md5=1834d44cb686cdfd9b7ee99398518115 && \
+#RUN md5=95bc486778c3111533944480a2be3b74 && \
 #    wget --quiet --no-check-certificate https://www.biostat.wisc.edu/~gitter/tmp/$md5/SINGE_Test && \
 #    wget --quiet --no-check-certificate https://www.biostat.wisc.edu/~gitter/tmp/$md5/SINGE_GLG_Test && \
 #    wget --quiet --no-check-certificate https://www.biostat.wisc.edu/~gitter/tmp/$md5/SINGE_Aggregate && \

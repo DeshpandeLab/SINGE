@@ -13,9 +13,9 @@ The software was formerly called SCINGE and has been renamed **SINGE**.
 
 If you use the SINGE software please cite:
 
-Atul Deshpande, Li-Fang Chu, Ron Stewart, Anthony Gitter.
-[Network inference with Granger causality ensembles on single-cell transcriptomic data](https://doi.org/10.1101/534834).
-*bioRxiv* 2019. doi:10.1101/534834
+[Network inference with Granger causality ensembles on single-cell transcriptomics](https://doi.org/10.1016/j.celrep.2022.110333).  
+Atul Deshpande, Li-Fang Chu, Ron Stewart, Anthony Gitter.  
+*Cell Reports*, 38:6, 2022.
 
 The [SINGE-supplemental](https://github.com/gitter-lab/SINGE-supplemental) repository contains additional scripts, analyses, and results related to this manuscript.
 
@@ -106,7 +106,7 @@ docker run -v $(pwd):/SINGE -w /SINGE agitter/singe:0.4.0 standalone data1/X_SCO
 
 #### Arbitrary commands using Bash as the entry point
 ```
-docker run -v $(pwd):/SINGE -w /SINGE --entrypoint "/bin/bash" agitter/singe:0.4.0 -c "source ~/.bashrc; conda activate singe-test; tests/compare_example_output.sh Output
+docker run -v $(pwd):/SINGE -w /SINGE --entrypoint "/bin/bash" agitter/singe:0.4.0 -c "source ~/.bashrc; conda activate singe-test; tests/compare_example_output.sh Output tests/reference/latest
 ```
 This example is part of the SINGE test code, which only runs when called from the root of the SINGE git repository.
 
